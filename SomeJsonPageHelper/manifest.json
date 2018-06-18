@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "name": "Some Page Helper",
+    "description": "Adds stuff to a website",
+    "version": "0.0",
+    "page_action": {
+        "default_icon": "icon.png",
+        "default_title": "Some Page Helper",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "eventPage.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://www.example.com/*",
+                "https://www.example.com/*"                
+            ],
+            "js": [
+                "jquery-3.3.1.min.js",
+                "format_contentScript.js"
+            ],
+            "css": [
+                "edit.css"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "http://example.com/*",
+        "https://example.com/*"        
+    ]
+}
