@@ -17,7 +17,9 @@
     "content_scripts": [
         {
             "matches": [
-                "somesite"                
+                "file:///*/RabbitMQ%20Management.html",
+                "http://dev-enterpriseservicebus/*",
+                "http://enterpriseservicebus/*"
             ],
             "js": [
                 "jquery-3.3.1.min.js",
@@ -29,7 +31,10 @@
         }
     ],
     "permissions": [
-        "tabs",
-        "somesite"        
+        "tabs",    
+        "downloads",
+        "file:///*/RabbitMQ%20Management.html",
+        "http://dev-enterpriseservicebus/*",
+        "http://enterpriseservicebus/*"
     ]
 }
